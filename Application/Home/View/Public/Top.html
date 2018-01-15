@@ -1,0 +1,83 @@
+<div id="topNav" class="clearfix">
+    <div style="float: left;"> 
+        <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
+            <if condition="!$_SESSION['name']">
+                    <a href="__MODULE__/Lr/login"><span> 登录</span></a>
+                    <a href="__MODULE__/Lr/register">注册</a>
+                <else/> 
+                {$Think.session.name}          
+            </if>
+            
+        </font>
+    </div>
+    <div style="float: right;">
+        <a href="__MODULE__/Cart/cat/name/{$Think.session.name}">查看购物车</a>
+        <if condition="!$_SESSION['name']">
+
+        <else/>
+        |
+        <a href="__MODULE__/Lr/logout">退出登录</a>
+        </if>
+
+    </div>
+</div>
+
+<div class="header">
+
+   
+    <!-- Logo/Title -->
+    
+    <div id="site_title"><a href="__MODULE__/Home/index">
+        <img src="__PUBLIC__/img/logo.png" alt="My Site Title" /></a>
+    </div>  
+        
+    <!-- Main Menu -->
+    
+    <ol id="menu">
+             <li  class="{:get_menu_active_style("home")}"><a href="__MODULE__/Home/index" >Home</a>
+        
+              <!-- sub menu -->
+              <!-- <ol>  
+                <li><a href="nivo.html">Nivo Slider</a></li>
+                <li><a href="ei_slider.html">EI Slider</a></li>
+                <li><a href="fullscreen_gallery.html">Fullscreen Slider</a></li>
+                <li><a href="image_frontpage.html">Static Image</a></li>
+              </ol> -->
+              </li><!-- end sub menu -->
+        
+        <li class="{:get_menu_active_style("mobilephone")}"><a href="__MODULE__/Mobilephone/index">Mobilephone</a>
+        
+              <!-- sub menu -->
+              <!-- <ol>     
+                <li><a href="magazine.html">Magazine</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="full-width.html">Full Width Page</a></li>
+                <li><a href="columns.html">Columns</a></li>
+              </ol> -->
+        </li><!-- end sub menu -->
+        
+        <li class="{:get_menu_active_style("flatpc")}"><a href="__MODULE__/Flatpc/index">Flatpc</a></li>
+              
+        <li class="{:get_menu_active_style("service")}"><a href="__MODULE__/Service/index">More</a>
+        
+              <!-- sub menu -->
+              <!-- <ol>     
+                <li><a href="gallery-simple.html">Simple</a></li>
+                <li><a href="portfolio.html">Filterable</a></li>
+                <li><a href="gallery_fader.html">Fade Scroll</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li class="last"><a href="photogrid.html">PhotoGrid</a></li>
+              </ol> -->
+        </li><!-- end sub menu -->
+        
+               <li class="{:get_menu_active_style("contact")}"><a href="__MODULE__/contact/index">Contact</a></li>
+    </ol>
+     
+       </div> 
+       
+     <!-- END header -->
+     <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+
+    <div id="container">
+
+

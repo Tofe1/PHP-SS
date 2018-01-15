@@ -1,0 +1,131 @@
+﻿/*
+Template Name: EC模板堂正版授权模板
+Template URI: #
+Description: 买模板请认准模板堂(ecmoban.com) <br/> 挑选优质商业模板：#
+Version: 2.71
+Author: 进模板堂挑选更多YONGDA模板
+Author URI: #
+Logo filename: logo.gif
+\\
+*/
+
+
+
+/* ====================
+     公共样式
+==================== */
+body{background:#fff; font-size:12px; font-family:"宋体",Verdana, Arial; line-height:150%; margin: 0; padding:0; color:#333;}
+div{margin:0 auto; padding:0;}
+h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,img,p{
+margin:0; padding:0; border:none; list-style-type:none;
+}
+.block{
+  width:960px; height:auto;
+}
+.f_l{float:left;}
+.f_r{float:right;}
+.tl{ text-align:left;}
+.tc{ text-align:center;}
+.tr{ text-align:right;}
+.dis{display:block;}
+.inline{display:inline;}
+.none{display:none;}
+.dashed{background:url(../image/lineBg.gif) repeat-x left top; color:#3f3f3f;  padding:2px 0 3px 12px;}
+
+.clearfix:after{
+content:"."; display:block; height:0; clear:both;
+visibility:hidden;
+}
+*html .clearfix{
+ height:1%;
+}
+*+html .clearfix{
+ height:1%;
+}
+/*英文强制换行*/
+.word{word-break:break-all;}
+
+  /*边框*/
+  .B_blue{border:1px solid #e2e2e2;}
+  .B_input{border:1px solid #ccc;}
+  .inputBg{border:1px solid #b3b3b3; background:url(../image/inputbg.gif) repeat-x left top; height:18px;}
+  /*字体颜色ecmoban.com*/
+  .f1{color:#ff7126; font-weight:bold}
+  .f2{color:#006bd0; font-weight:bold; margin-right:15px;}
+  .f3{color:#9e9e9e;}
+  .f4{color:#ff7126;}
+  .f4_b{color:#ff7126; font-weight:bold;}
+  .f5{ font-size:14px; font-weight:bold;}
+  .f6{color:#006bd0;}
+  .market{ font-size:12px; text-decoration:line-through; color:#999}
+  .shop{color:#ff7126; font-size:14px; font-weight:600;}
+  .market_s{text-decoration:line-through;}
+  .shop_s{color:#ff7126; font-weight:bold}
+  /*按钮部分*/
+  .bnt_blue{
+  background:url(../image/bg.gif) no-repeat 0px 0px; width:52px; height:21px;
+  text-align:center; line-height:22px; color:#333; border:none; cursor:pointer; overflow:hidden
+  }
+  .bnt_blue_1{
+  background:url(../image/bg.gif) no-repeat 0px -663px; width:77px; height:21px;
+  text-align:center; line-height:22px; color:#333; border:none; cursor:pointer;overflow:hidden
+  }
+  .bnt_blue_2{
+  background:url(../image/bg.gif) no-repeat 0px -696px; width:139px; height:21px;
+  text-align:center; line-height:22px; color:#333; border:none; cursor:pointer;overflow:hidden
+  }
+  .bnt_bonus{
+  background:url(../image/bg.gif) no-repeat -56px 0px; width:52px; height:21px;
+  text-align:center; line-height:22px; color:#333; border:none; cursor:pointer;overflow:hidden
+  }
+  /*box from ec moban*/
+  .box{ overflow:hidden;}
+  .box_1{border:1px solid #ccc; background-color:#fff;}
+  .box_2{border:1px solid #ccc; background:url(../image/box_2Bg.gif) repeat-x top left;
+  background-color:#edf8fe;  overflow:hidden;
+  }
+  .boxCenterList{padding:8px;}
+  /*模块标题*/
+ 
+
+  /*页面留白*/
+  .blank{height:8px; line-height:8px; clear:both; visibility:hidden;}
+  .blank5{height:5px; line-height:5px;/* _margin:-3px 0;e c m o b a n*/ clear:both; visibility:hidden;}
+  /*布局*/
+  .AreaL{width:210px; float:left; overflow:hidden}
+  .AreaR{width:738px; float:right; overflow:hidden}
+  .AreaM{ width:515px; float:left; padding-left:12px;}
+  
+.AreaL h3{ background:url(../image/tit3.gif) no-repeat;  height:29px;line-height:29px; color:#FFF}
+.AreaL h3 span{ background:none; color:#fff; font-weight:normal ;font-size:14px;height:29px;line-height:29x;}
+
+/* ====================
+     导航部分
+==================== */
+  /*顶部管理型导航*/
+
+  .tit1{ width:150px; height:34px; line-height:34px; background: url(../image/tit1.gif) no-repeat; font-size:14px; font-weight:bold; color:#FFFFFF; padding-left:40px;}
+  #topNav{ height:28px; background:#f7f7f7; border:1px solid #dbdbdb; border-top:none;
+  line-height:28px; color:#333; padding:0px 10px; margin:0px 5px; position:relative; text-align:right
+  }
+  
+  #topNav a{color:#333; text-decoration:none;}
+  /*页面主导航*/
+ 
+  
+  
+  
+  
+  
+  
+  /*搜索*/
+  #search{ width:950px;
+  padding:0px 0px; height:28px; line-height:28px;
+  }
+  #search a{color:#333; text-decoration:none;}
+  #search .keys{
+  color:#c00; padding-left:40px;
+  }
+  
+
+ 

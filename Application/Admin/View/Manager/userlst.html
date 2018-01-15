@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <include file="Public/all"/>
+    
+  <include file="Public/head"/>
+    
+
+
+  <include file="Public/left"/>
+    
+
+    
+    <div class="content">
+        
+        <div class="header">
+            
+            <h1 class="page-title">用户管理</h1>
+        </div>
+        
+                <ul class="breadcrumb">
+            <li><a href="index.html">用户管理</a> <span class="divider">/</span></li>
+            <li class="active">用户列表</li>
+        </ul>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                    
+<div class="btn-toolbar">
+
+    
+    
+  <div class="btn-toolbar">
+    <form class="search form-inline" method="GET" action="__SELF__">
+    <input  value="{$_GET['user_name']}" name="user_name" type="text" placeholder="用户名称">
+            <button class="btn">搜索</button>
+    </form>
+           
+  </div>
+</div>
+<form method="POST" action="/Admin/Manager/userpldelete">
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>选择</th>
+          <th>id</th>
+          <th>用户姓名</th>
+          <th>密码</th>
+          <th>邮箱</th>
+          <th>真实姓名</th> 
+          <th style="width: 26px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+          <volist  name="info" id="v">
+        <tr>
+           <td><input type="checkbox" name="user_id[]" value="{$v['user_id']}"></td>                
+          <td>{$v[user_id]}</td>
+          <td>{$v[user_name]}</td>
+          <td>{$v[user_password]}</td>
+          <td>{$v[user_email]}</td>
+          <td>{$v[user_relname]}</td>
+          <td>
+              <a href="__MODULE__/Manager/useredit/id/{$v['user_id']}"><i class="icon-pencil"></i></a>
+              <a onclick="return confirm('确定要删除吗？');" href="__MODULE__/Manager/userdelete/user_id/{$v['user_id']}" role="button"><i class="icon-remove"></i></a>
+          </td>
+          </volist>
+        </tr>
+       
+      </tbody> 
+      <input onclick="return confirm('确定要删除吗？');" type="submit" class="btn" name="" value="删除所选">
+    </table>
+</div>
+</form>
+<div class="pagination" style="text-align:center">
+    <ul>
+        {$page}
+    </ul>
+</div>
+
+<!-- <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Delete Confirmation</h3>
+    </div>
+    <div class="modal-body">
+        <p class="error-text"><i class="icon-warning-sign modal-icon"></i>Are you sure you want to delete the user?</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button class="btn btn-danger" data-dismiss="modal"><a href="__MODULE__/Goods/delete/id/{$v['goods_id']}">Delete</a></button>
+    </div>
+</div> -->
+
+
+                    
+<include file="Public/lee"/>
+    
+  </body>
+</html>
+
+

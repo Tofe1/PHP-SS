@@ -1,0 +1,6 @@
+[ 2017-12-24T00:26:04+08:00 ] ::1 /index.php/cate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+ERR: 无法加载模块:Cate
+

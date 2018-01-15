@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+
+<head>
+
+    <title>Bigshot Theme by CssTemplateHeaven</title>
+    <meta name="keywords" content="create from keywords">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- CSS Files -->
+
+    <include file="Public/jscss"/>
+    <script src="__PUBLIC__/js/jquery.tools.min.js" type="text/javascript"></script>
+        
+    <script type="text/javascript">
+        $(function() {
+        $("#prod_nav ul").tabs("#panes > div", {effect: 'fade', fadeOutSpeed: 400});
+    });
+    </script>
+    <link href="__PUBLIC__/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+            $(document).ready(function(){
+            $(".pane-list li").click(function(){
+            window.location=$(this).find("a").attr("href");return false;
+        });
+    
+    }); //close doc ready
+    </script>
+</head>
+
+<body style="cursor: auto;">
+       
+<include file="Public/top"/>
+  
+   
+    <!-- Logo/Title -->
+    
+   
+
+
+<!-- tab panes -->
+
+<div id="prod_wrapper">
+
+    <div id="panes">
+    <volist name="goodsname" id="vo">
+    <div>
+    <a href="__MODULE__/Cart/messages/id/{$vo.goods_id}"><img  src="__UP__{$vo.goods_big_img}" height="265" width="250" alt="demo" />	</a>			
+    <h5>{$vo.goods_name}</h5>
+    <p>{$vo.goods_introduce}</p>
+    <p></p>
+    <!-- <p style="text-align:right; margin-right: 16px"><a href="#" class="button">更多信息</a> <a href="#" class="button">加入购物车</a></p>	 -->
+   </div>
+    </volist>
+    </div> 
+
+<!-- END tab panes -->
+
+
+<br clear="all" />
+
+
+<!-- navigator -->
+<div id="prod_nav">
+<ul>
+<volist name="goodsname" id="vo">
+<li><a href="#1"><img src="__UP__{$vo.goods_small_img}" style="margin-right:0px;" text-align:center height="120" width="120" alt="demo"/><strong>{$vo.goods_name}</strong> ￥{$vo.goods_price}</a></li>
+</volist>
+</ul>
+
+</div><!-- close navigator -->
+
+
+
+</div><!-- END prod wrapper -->
+
+
+
+    
+    <div style="clear:both"></div>
+    
+    <h1 style="padding: 50px 0">This is our new produces</h1>
+    
+        <blockquote>Nulla hendrerit commodo tortor, vitae elementum magna convallis nec. 
+            Nam tempor nibh a purus aliquam et adipiscing elit gravida. Ut vitae nunc a libero volutpat 
+            gravida. Nullam egestas mi sit amet dui scelerisque eu laoreet nisi 
+            ultrices. Ut vitae nunc a libero volutpat gravida. Nam tempor nibh a purus aliquam.
+    </blockquote>
+    <p style="text-align:right; margin-right: 16px; margin-bottom: 15px"><a href="__MODULE__/Service/index" class="button" style="font-size: 18px">Find out more</a></p>
+    
+
+    <!-- First Column -->
+    <volist name="goodsname4" id="vo">
+    <div class="one-fourth last">
+      <div class="heading_bg"><h2>{$vo.goods_name}</h2></div>
+      <img src="__UP__{$vo.goods_big_img}" width="216" alt="demo" />	
+    </div>
+    </volist>
+    <div style="clear:both; height: 40px"></div>
+    </div>
+
+    <!-- END container -->
+
+<include file = "Public/base"/>
+ <!-- END footer -->
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+    <include file="Public/all"/>
+    
+  <include file="Public/head"/>
+    
+
+
+  <include file="Public/left"/>
+
+    
+    <div class="content">
+        
+        <div class="header">
+            
+            <h1 class="page-title">商品管理</h1>
+        </div>
+        
+                <ul class="breadcrumb">
+            <li><a>商品管理</a> <span class="divider">/</span></li>
+            <li><a >添加商品</a> <span class="divider">/</span></li>
+            
+        </ul>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                    
+
+<div class="well">
+   
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane active in" id="home">
+    <form id="tab" action="__SELF__" method="POST"  enctype="multipart/form-data">
+        <label>商品名称</label>
+        <input type="text" name="goods_name" class="input-xlarge">
+        <label>商品种类</label>
+                <select name="goods_category" class="input-xlarge">
+                    <option value="未选择" selected="selected">-请选择-</option>
+                    <option value="手机">手机</option>
+                    <option value="平板">平板</option>  
+                </select>
+        <label>价格</label>
+        <input type="text" name="goods_price" class="input-xlarge">
+        <label>库存数量</label>
+        <input type="text" name="goods_number" class="input-xlarge">
+        <label>商品介绍</label>
+        <textarea name="goods_introduce" rows="3" class="input-xlarge"></textarea>
+        <label>图片</label>
+        <input type="file" name="goods_pic" class="input-xlarge">
+        <div class="btn-toolbar">
+         <button class="btn btn-primary"><i class="icon-save"></i> Save</button>
+         <div class="btn-group">
+         </div>
+        </div>
+    
+    </form>
+      </div>
+      
+  </div>
+
+</div>
+
+<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Delete Confirmation</h3>
+  </div>
+  <div class="modal-body">
+    
+    <p class="error-text"><i class="icon-warning-sign modal-icon"></i>Are you sure you want to delete the user?</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    <button class="btn btn-danger" data-dismiss="modal">Delete</button>
+  </div>
+</div>
+
+
+                    
+<include file="Public/lee"/>             
+    
+  </body>
+</html>
+
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <include file="Public/all"/>
+    
+  <include file="Public/head"/>
+    
+
+
+  <include file="Public/left"/>
+    
+
+    
+    <div class="content">
+        
+        <div class="header">
+            
+            <h1 class="page-title">商品管理</h1>
+        </div>
+        
+                <ul class="breadcrumb">
+            <li class="active"><a >商品管理</a> <span class="divider">/</span></li>
+            <li class="active">商品列表</li>
+        </ul>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                    
+<div class="btn-toolbar">
+
+    
+    
+  <div class="btn-toolbar">
+    <form class="search form-inline" method="GET" action="__SELF__">
+    <input  value="{$_GET['goods_name']}" name="goods_name" type="text" placeholder="商品名称">
+            <button class="btn">搜索</button>
+            <!-- <a href="__CONTROLLER__/lst?goods_category=3" class="btn">未分类</a>
+            <a href="__CONTROLLER__/lst?goods_category=1" class="btn">手机</a>
+            <a href="__CONTROLLER__/lst?goods_category=2" class="btn">平板</a>
+            <a href="__CONTROLLER__/lst?goods_category=0" class="btn">全部</a> -->
+    </form>
+           
+  </div>
+</div>
+<form method="POST" action="/Admin/Goods/pldelete">
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>选择</th>
+          <th>id</th>
+          <th>商品名称</th>
+          <th>商品种类</th>
+          <th>价格</th>
+          <th>库存</th>
+          <th>介绍</th>
+          <th>缩略图</th>
+          <th style="width: 26px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+          <volist  name="info" id="v">
+        <tr>
+           <td><input type="checkbox" name="goods_id[]" value="{$v['goods_id']}"></td>                
+          <td>{$v[goods_id]}</td>
+          <td>{$v[goods_name]}</td>
+          <td>{$v[goods_category]}</td>
+          <td>{$v[goods_price]}</td>
+          <td>{$v[goods_number]}</td>
+          <td>{$v[goods_introduce]}</td>
+          <td><img src="__UP__{$v['goods_small_img']}"></td>
+          <td>
+              <a href="__MODULE__/Goods/edit/id/{$v['goods_id']}"><i class="icon-pencil"></i></a>
+              <a onclick="return confirm('确定要删除吗？');" href="__MODULE__/Goods/delete/goods_id/{$v['goods_id']}" role="button"><i class="icon-remove"></i></a>
+          </td>
+          </volist>
+        </tr>
+       
+      </tbody> 
+      <input onclick="return confirm('确定要删除吗？');" type="submit" class="btn" name="" value="删除所选">
+    </table>
+</div>
+</form>
+<div class="pagination" style="text-align:center">
+    <ul>
+        {$page}
+    </ul>
+</div>
+
+<!-- <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Delete Confirmation</h3>
+    </div>
+    <div class="modal-body">
+        <p class="error-text"><i class="icon-warning-sign modal-icon"></i>Are you sure you want to delete the user?</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button class="btn btn-danger" data-dismiss="modal"><a href="__MODULE__/Goods/delete/id/{$v['goods_id']}">Delete</a></button>
+    </div>
+</div> -->
+
+
+                    
+<include file="Public/lee"/>
+    
+  </body>
+</html>
+
+

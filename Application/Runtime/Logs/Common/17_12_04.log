@@ -1,0 +1,6 @@
+[ 2017-12-04T11:23:22+08:00 ] ::1 /index.php/a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+ERR: 无法加载模块:A
+

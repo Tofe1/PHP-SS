@@ -1,0 +1,32 @@
+<div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+<div class="sidebar-nav">
+    
+
+    <a href="#dashboard-menu" class="nav-header" data-toggle="collapse"><i class="icon-dashboard"></i>后台首页</a>
+    <ul id="dashboard-menu" class="{:get_menu_controller_style("index")}">
+        <li  class="{:get_menu_active_style("index")}"><a href="__MODULE__/Index/index">Home</a></li>
+        
+        
+    </ul>
+
+    <a href="#accounts-menu" class="nav-header" data-toggle="collapse"><i class="icon-briefcase"></i>商品管理</a>
+    <ul id="accounts-menu" class="{:get_menu_controller_style("goods")}">
+        <li class="{:get_menu_active_style("lst")}"><a href="__MODULE__/Goods/lst">商品列表</a></li>
+        <li class="{:get_menu_active_style("add")}"><a href="__MODULE__/Goods/add">添加商品</a></li>
+        <li class="{:get_menu_active_style("edit")}"><a href="__MODULE__/Goods/edit">修改商品</a></li>
+    </ul>
+
+    <a href="#error-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-user"></i>用户管理</a>
+    <ul id="error-menu" class="{:get_menu_controller_style("manager")}">
+        <li class="{:get_menu_active_style("userlst")}"><a href="__MODULE__/Manager/userlst">用户列表</a></li>
+        <li class="{:get_menu_active_style("useradd")}"><a href="__MODULE__/Manager/useradd">添加新用户</a></li>
+        <li class="{:get_menu_active_style("useredit")}"><a href="__MODULE__/Manager/useredit">修改用户信息</a></li>
+    </ul>
+
+    <a href="#legal-menu" class="nav-header" data-toggle="collapse"><i class="icon-legal"></i>信息管理</a>
+    <ul id="legal-menu" class="{:get_menu_controller_style("message")}">
+        <li class="{:get_menu_active_style("contact")}"><a href="__MODULE__/Message/contact">用户联系</a></li>
+        <li class="{:get_menu_active_style("orderlst")}"><a href="__MODULE__/Message/orderlst">订单处理</a></li>
+    </ul>
+
+</div>
